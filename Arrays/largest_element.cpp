@@ -1,4 +1,5 @@
 #include<iostream>
+#include<climits>
 using namespace std;
 
 int main(){
@@ -16,7 +17,7 @@ int main(){
         cout<<array[i]<<endl;
     }
 
-    int max=array[0];
+    int max= INT_MIN;
     for(int i=1;i<n;i++){
         if(array[i]>max){
             max=array[i];

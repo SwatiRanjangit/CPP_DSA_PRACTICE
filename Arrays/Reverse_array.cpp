@@ -7,7 +7,6 @@ void reverse_array(int arr[], int n){
     int temp = arr[i];
     arr[i] = arr[j];
     arr[j] = temp;
-
     i++;
     j--;
 

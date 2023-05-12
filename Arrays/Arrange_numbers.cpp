@@ -25,7 +25,7 @@ int main(){
     int arr[100];
     Arrange(arr,n);
 
-    for(int i =0;i<n;i++){
+    for(int i = 0;i<n;i++){
         cout<<arr[i]<<endl;
     }
     return 0;
