@@ -9,7 +9,7 @@ void minLen(char input[], char output[]){
     int len = strlen(input);
     for(i = 0; i < len; i++){
         if(input[i] == ' '){
-            int currentWordLength = i - currentStart;
+            int currentWordLength = i - currentStart;   // swati is good 
             if(currentWordLength < minLength){
                 minStart = currentStart;
                 minLength = currentWordLength;

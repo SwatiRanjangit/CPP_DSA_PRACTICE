@@ -22,7 +22,4 @@ int main(){
     trim_space(string);
     cout<<"after trimming string is: "<<string<<endl;
     return 0;
-
-
-
 }
