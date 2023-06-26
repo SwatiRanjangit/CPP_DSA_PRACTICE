@@ -17,4 +17,15 @@ int main(){
     cout<<k<<endl;
     cout<<j<<endl;
 
+    // CONSTANT REFERENCE BY A CONST INTEGER.
+   const int c = 10;
+   const int& c1 = c;
+
+   //  REFERENCE BY A  CONST INTEGER.
+   const int i = 10;
+//    int& k1 = i;  // not vaalid because the i path is const so not valid.
+// k1++
+
+
+
 }

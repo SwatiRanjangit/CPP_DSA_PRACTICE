@@ -28,7 +28,7 @@ int main(){
     }
 
     cout<<"max is: "<<max<<endl;
-    delete []a;
+    delete []a;  // array deletion.
     return 0;
 
 }
