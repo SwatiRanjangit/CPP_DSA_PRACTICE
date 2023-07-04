@@ -6,7 +6,7 @@ void indices(int arr[],int currIndex, int n, int x, int output[] , int& k ){
     if(currIndex == n)
      return;
     
-    if(currIndex[arr] == x){
+    if(arr[currIndex] == x){
         output[k] = currIndex;
         k++;
     }
