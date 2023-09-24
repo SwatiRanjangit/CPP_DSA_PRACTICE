@@ -2,7 +2,7 @@
 using namespace std;
 
 class Node{
-    private:
+    public:
     int data;
     Node* next;
 
@@ -10,13 +10,13 @@ class Node{
      this->data = data;
      next=NULL;
     }
-}
+};
 
 
 Node* takeInput(){
     int data;
     cin>>data;
-   Node* head =null;
+   Node* head =NULL;
    while(data != -1){
     Node* newNode = new Node(data);
     if(head == NULL){
@@ -36,7 +36,7 @@ Node* takeInput(){
 
 }
 
-void print(Node head){
+void print(Node* head){
     while(head!=NULL){
         cout<<head->data<<" ";
         head = head->next;
