@@ -4,7 +4,7 @@ using namespace std;
 
 
 int decimalToBinary(int n){
-
+   
     //Division method: 
   int binaryno = 0;
   int i=0;
