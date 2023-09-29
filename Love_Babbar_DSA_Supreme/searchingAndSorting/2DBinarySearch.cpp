@@ -1,13 +1,13 @@
 #include <iostream>
 using namespace std;
-bool binarySearch(int arr[][3],int m,int n,int target){
+bool binarySearch(int arr[][3],int row,int col,int target){
   int s =0;
-  int size = m * n;
+  int size = row * col;
   int e = size -1;
   while(s<=e){
     int mid = s+(e-s)/2;
-    int rowIndex= mid /n; // finding rowIndex of the value of mid here n= columns
-    int colIndex = mid % m; // finding columnIndex of the value of mid m = rows
+    int rowIndex= mid /col; // finding rowIndex of the value of mid here n= columns
+    int colIndex = mid % row; // finding columnIndex of the value of mid m = rows
     
     if(arr[rowIndex][colIndex] == target){
     cout<<"found at: "<<rowIndex<<" "<<colIndex<<endl;
