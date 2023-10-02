@@ -1,11 +1,12 @@
+// TIME COMPLEXITY: O(n2) time
+
 #include <iostream>
-// #include<vector>
-// #include<climits>>
-// #include<algorithm>
+
 using namespace std;
 
  int expandAroundIndex(string s,int i,int j){
        int count =0;
+         //jbtk match ho rha hai substring to count++ and left me jao and right me jao
        while(i>=0 && j<s.length() && s[i]==s[j]){
            count++;
            i--;
