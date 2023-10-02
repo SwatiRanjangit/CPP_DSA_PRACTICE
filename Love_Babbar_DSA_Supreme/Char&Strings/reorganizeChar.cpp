@@ -1,17 +1,18 @@
+// result is: vlvov
+
 #include <iostream>
 #include<climits>
 using namespace std;
-
 string reorganizeString(string s) {
         int hash[26]={0};
       
       //mapping 0 to char a(97) and till z.
         for(int i=0;i<s.size();i++){
-            hash[s[i] - 'a']++; 
+            hash[s[i]-'a']++; 
         }
 
         // variables
-        char most_freq_char;  // store the char  of most occuring char
+        char max_freq_char;  // store the char  of most occuring char
         int max_Freq=INT_MIN; // store maximum frequency of most occuring char in the string
     
     // finding most occuring char in the string
@@ -19,7 +20,7 @@ string reorganizeString(string s) {
             if(hash[i]>max_Freq){
 
                 max_Freq = hash[i];
-                most_freq_char = i + 'a';
+                max_freq_char = i + 'a';
             }
         }
 
@@ -28,7 +29,7 @@ string reorganizeString(string s) {
          
     // placing the most occuring char in the string  condition that till max freq is  > 0 and index size is less than size of string
         while(max_Freq > 0 && index < s.size()){
-            s[index] = most_freq_char;
+            s[index] = max_freq_char;
             max_Freq--;
             index+=2; //place one char space the other char
         }
@@ -38,20 +39,23 @@ string reorganizeString(string s) {
             return "";
         }
 
+    hash[max_freq_char - 'a'] = 0; //again make max_freq = 0 after placing all char.
 // place other remaing char of the string 
         for(int i=0;i<26;i++){
             while(hash[i] > 0){
-                index = index > s.size() ? 1 : index; // if the index when last max freq is placed the increase and it goes out of bound then again make index = 1 otherwise let it be.
+                 // if the index when last max freq is placed the increase and it goes out of bound then again make index = 1 otherwise let it be.
+                 index = index >= s.size() ? 1 : index;
+               
                 s[index] = i + 'a';
+                 index+=2;
                 hash[i]--;  // after placing each reaming char decrese hash
-                index+=2;
+               
             }
         }
         return s;
  }
-
 int main() {
- string s = "aab";
+ string s = "vvvlo";
 string res =reorganizeString(s);
   cout<<"result is: "<<res<<endl;
   
