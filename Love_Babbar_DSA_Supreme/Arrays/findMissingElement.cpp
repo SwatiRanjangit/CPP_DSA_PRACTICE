@@ -29,6 +29,7 @@ int main() {
  int arr[]={1,3,3,5,4};
   int size =5;
   int i=0;
+  //loop for storing the elements in thier index suppose 1 to 1st index and 2 to 2nd index.
   while(i<size){
     int index = arr[i]-1;
     

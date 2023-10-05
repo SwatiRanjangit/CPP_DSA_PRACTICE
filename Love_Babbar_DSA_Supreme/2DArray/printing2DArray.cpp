@@ -19,7 +19,7 @@ int arr[n][m];
     cout<<endl;
   }
 
-  //printing rowise 
+  //printing colwise 
   cout<<"Printing column wise: "<<endl;
   for(int i=0;i<n;i++){
     for(int j=0;j<m;j++){
