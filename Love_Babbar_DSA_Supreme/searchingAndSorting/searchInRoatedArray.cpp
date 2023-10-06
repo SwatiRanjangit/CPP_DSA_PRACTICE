@@ -1,32 +1,46 @@
 #include <iostream>
 using namespace std;
-int pivotElement(int arr[],int n){
-  int s =0;
-  int e=n-1;
-  while(s<e){
-    int mid = s+(e-s)/2;
-    if(arr[mid]>=arr[0]){
-      s = mid +1;
-    }else{
-      e=mid;
-    }
-  }
-  return s;
+
+int peakElement(vector<int> nums) {
+        int s = 0;
+        int e = nums.size() - 1;
+        while (s <= e) {
+            int mid = s+(e-s)/2;
+        // case of one element
+            if(s==e){
+                return s;
+            }
+            if(mid <=e && nums[mid] > nums[mid+1]){
+                return mid;
+            }
+
+            if(mid-1 >=s && nums[mid-1] > nums[mid]){
+                return mid-1;
+            }
+
+            if(nums[s]>nums[mid]){
+                e=mid-1;
+            }else{
+                s=mid+1;
+            }
+        }
+
+    return -1;
+        
 }
 
-int binarySearch(int arr[],int s,int e,int key){
- 
-  while(s<=e){
-    int mid = s+(e-s)/2;
-    if(arr[mid]==key){
-      return mid;
-    }else if(arr[mid]<key){
-      s = mid +1;
-    }else{
-      e=mid-1;
-    }
-  }
-  return -1;
+int binarySearch(vector<int> nums, int s, int e, int target) {
+        while (s <= e) {  // Change s<e to s<=e
+            int mid = s + (e - s) / 2;
+            if (nums[mid] == target) {
+                return mid;
+            } else if (nums[mid] < target) {
+                s = mid + 1;
+            } else {
+                e = mid - 1;
+            }
+        }
+        return -1;
 }
 
 
@@ -50,4 +64,4 @@ int main() {
     cout<<"not found "<<res<<endl;
   }
   return 0;
-}s
+}
