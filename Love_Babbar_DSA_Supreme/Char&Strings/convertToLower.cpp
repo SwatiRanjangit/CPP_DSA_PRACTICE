@@ -3,10 +3,9 @@
 using namespace std;
 
 void convertLowerCase(char arr[]) {
-  
-  int n = strlen(arr);
+    int n= strlen(arr);
   for(int i=0;i<n;i++){
-    arr[i]=arr[i]-'A'+'a';
+      arr[i] = arr[i]-'A'+'a';
   }
 }
 
@@ -15,7 +14,7 @@ int main() {
   cin.getline(arr, 60); // Read up to 60 characters
   cout << "initially is: " << arr << endl << endl;
   convertLowerCase(arr);
-   cout << "String after upper case: " << arr<<endl;
+   cout << "String after lower case: " << arr<<endl;
 
 
   return 0;
