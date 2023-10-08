@@ -18,6 +18,7 @@ using namespace std;
             minutes.push_back(totalMin);
         }
 
+
         //sort the minutes so that to find  diffrence
         sort(minutes.begin(), minutes.end());
         int mini = INT_MAX;
