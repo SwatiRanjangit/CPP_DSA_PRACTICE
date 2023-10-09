@@ -39,16 +39,21 @@ int main() {
     // cout<<c<<endl;
     // cout<<arr[0]<<endl;
     
-    char c[15] = "sher bano";
-    char* cp = &c[0];
-    cout<<c<<endl;
-    cout<<&c<<endl;
-    cout<<cp<<endl;
-    cout<<&cp<<endl;
-    cout<<*(cp+3)<<endl;
-    cout<<cp+2<<endl;
-    cout<<*c<<endl;
-    cout<<cp+8<<endl;
+    // char c[15] = "sher bano";
+    // char* cp = &c[0];
+    // cout<<c<<endl;
+    // cout<<&c<<endl;
+    // cout<<cp<<endl;
+    // cout<<&cp<<endl;
+    // cout<<*(cp+3)<<endl;
+    // cout<<cp+2<<endl;
+    // cout<<*c<<endl;
+    // cout<<cp+8<<endl;
+    
+    //case of single character
+    char ch='k';
+    char* ct=&ch;
+    cout<<ct<<endl; // print the value until it found the null character
     
    
    
