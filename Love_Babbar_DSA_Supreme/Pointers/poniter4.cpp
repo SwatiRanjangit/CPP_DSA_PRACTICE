@@ -15,6 +15,8 @@ int main() {
    cout<<a<<endl;
 
   until(q);
+  //also we can do like this
+  // until(&p); without making a new variable **q.
 
    cout<<"before: "<<endl;
    cout<<a<<endl;
