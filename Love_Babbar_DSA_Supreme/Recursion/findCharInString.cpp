@@ -3,7 +3,7 @@
 #include<climits>
 using namespace std;
 
-bool FindChar(string s,int n,int i, char c){
+bool FindChar(string& s,int& n,int& i, char& c){
   if(i>=n) {
     return false;
   }
@@ -11,7 +11,8 @@ bool FindChar(string s,int n,int i, char c){
   if(s[i]==c){
     return true;
   }
-  return FindChar(s,n,i+1,c);
+  int newi = i + 1;
+  return FindChar(s,n,newi,c);
     
    
 }
