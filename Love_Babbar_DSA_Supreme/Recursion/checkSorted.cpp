@@ -5,11 +5,11 @@ using namespace std;
 
 
 bool isSortedArray(vector<int>& arr,int& n,int i){
-  if(i>=n-1){
+  if(i==n-1){
     return true;
   }
   
-  if(arr[i+1]>arr[i]){
+  if(arr[i+1]>=arr[i]){
     return isSortedArray(arr,n,i+1);
   }else{
       return false;
