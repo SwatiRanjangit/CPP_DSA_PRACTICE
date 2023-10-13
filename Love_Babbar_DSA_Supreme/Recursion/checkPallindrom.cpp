@@ -10,6 +10,12 @@ bool pallindromCheck(string& str, int s, int e){
     return true;
    }
 
+
+   
+    // Convert characters to lowercase (or uppercase) for comparison
+    // char charS = tolower(str[s]);
+    // char charE = tolower(str[e]);
+
   // 1 case 
    if(str[s] != str[e]){
     return false;
