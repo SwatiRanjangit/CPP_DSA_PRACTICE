@@ -1,3 +1,6 @@
+// TC: O(N)
+// SPACE : O(NM)
+
 #include <iostream>
 #include<vector>
 using namespace std;

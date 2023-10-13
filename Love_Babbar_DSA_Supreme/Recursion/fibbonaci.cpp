@@ -1,3 +1,6 @@
+// TC: O(2^n)
+//SC: O(n)
+
 #include <iostream>
 #include<vector>
 using namespace std;
