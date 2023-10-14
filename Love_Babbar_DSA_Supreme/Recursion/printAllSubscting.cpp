@@ -10,6 +10,9 @@
 3 
 3 4 
 4 
+
+
+TC: O(n2)
 */
 
 #include <iostream>
