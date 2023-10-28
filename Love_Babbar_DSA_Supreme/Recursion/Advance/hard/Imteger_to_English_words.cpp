@@ -1,4 +1,6 @@
 // Online C++ compiler to run C++ program online
+// TC and SC: ceil (log10 n)
+ 
 #include <iostream>
 #include<vector>
 using namespace std;
