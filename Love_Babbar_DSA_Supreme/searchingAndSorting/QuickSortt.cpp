@@ -1,4 +1,6 @@
 // Online C++ compiler to run C++ program online
+//TC(Avg): O(n log(n))
+//TC(worst): O(n2)
 #include <iostream>
 #include<vector>
 using namespace std;
@@ -11,31 +13,31 @@ int pivotElement(int arr[], int s,int e){
     //2. place pivot ele to it's right pos
     int count = 0;
     for(int i=s+1; i<=e;i++){
-        if(arr[i] < pivotEle){
+        if(arr[i] <= pivotEle){
             count++;
         }
     }
     
-    // when we find right place then swap the lement with that right place.
+    //here we'll have the number of ele that is less that pivot so swap pivot element with arr[count] to place in right place
     int rightIndex = s + count;
     swap(arr[pivotIndex],arr[rightIndex]);
     pivotIndex = rightIndex;
     
-    //sort according to left will be smaller element than pivot nd right will be bigger
+        // now we will check whether any ele that is in left of pivot is lesser or greater if greater then swap
     
     int i=s;
     int j=e;
     while(i<pivotIndex && j>pivotIndex){
-        //if left elemnt is small
-        while(arr[i]<pivotEle){
+        //if there is elemnt that is lesser than pivot in left
+        while(arr[i]<=pivotEle){
             i++;
         }
-        //if right ele is bigger
+        //if there is element that is greater than pivot in right side
         while(arr[j] > pivotEle){
             j--;
         }
         
-        // if element in wrong order
+         // if there is some ele that is greater in left or lesser in right then need to swap
         if(i<pivotIndex && j>pivotIndex)
          swap(arr[i],arr[j]);
     }
