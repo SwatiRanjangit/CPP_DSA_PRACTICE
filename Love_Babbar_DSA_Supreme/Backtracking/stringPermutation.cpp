@@ -1,4 +1,5 @@
 // Online C++ compiler to run C++ program online
+//TC: O(n!)
 #include <iostream>
 using namespace std;
 
@@ -16,7 +17,7 @@ void printPermutation(string& str, int i){
         //recursive call for others
         printPermutation(str,i+1);
         
-        //backtracking
+        //backtracking - To recreate the original string    
         swap(str[i],str[j]);
     }
     
