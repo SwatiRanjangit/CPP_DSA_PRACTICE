@@ -13,5 +13,12 @@ int main() {
        cout<<endl;
    }
 
+   //de-allocate 2D vector
+   for(int i=0; i<row;i++){
+    delete []arr[i];
+   }
+
+   delete []arr;
+
     return 0;
 }
