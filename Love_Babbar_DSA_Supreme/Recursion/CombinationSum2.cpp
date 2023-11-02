@@ -1,5 +1,5 @@
 // Online C++ compiler to run C++ program online
-// there can be multiple same elements in the ans
+// unique elements combo
 #include <iostream>
 #include<vector>
 using namespace std;
@@ -19,15 +19,26 @@ using namespace std;
    // one case
    for(int i=index ; i<candidates.size(); i++){
        v.push_back(candidates[i]);
-       combinationSum_helper(candidates, target - candidates[i], ans, v, i);
+       combinationSum_helper(candidates, target - candidates[i], ans, v, i+1);
        v.pop_back();
    }
     }
 
 vector<vector<int>> combinationSum(vector<int>& candidates, int target) {
+    sort(candidates.begin(), candidates.end());
         vector<vector<int>> ans;
         vector<int> v;
         combinationSum_helper(candidates , target, ans, v, 0 );
+        set<vector<int> >st;
+        for(auto s : ans){
+            st.insert(s);
+        }
+
+        ans.clear();
+        for(auto s : st){
+            ans.push_back(s);
+        }
+
         return ans;
 }
 
