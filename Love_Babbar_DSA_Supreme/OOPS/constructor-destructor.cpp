@@ -14,12 +14,15 @@ class Base{
 };
 
 class Derived :public Base{
+    int *a;
     public:
     Derived(){
+        a = new int[1000];
         cout<<"derived constructor"<<endl;
     }
     
     ~Derived(){
+        delete[] a;
         cout<<"derived destructor"<<endl;
     }
 };
