@@ -1,4 +1,4 @@
-// 
+// in static function we can only access static members. and that function will be common to all the instances of that class.
 #include <iostream>
 using namespace std;
 
