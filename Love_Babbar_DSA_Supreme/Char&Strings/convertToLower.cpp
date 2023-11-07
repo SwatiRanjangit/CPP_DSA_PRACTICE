@@ -1,11 +1,15 @@
 #include <iostream>
 #include <cstring>
+#include<vector>
 using namespace std;
 
-void convertLowerCase(char arr[]) {
-    int n= strlen(arr);
+void convertLowerCase(char c[]){
+  int n = strlen(c);
   for(int i=0;i<n;i++){
-      arr[i] = arr[i]-'A'+'a';
+    if(c[i] >= 'A' && c[i] <= 'Z'){
+      c[i] = c[i]-'A'+'a';
+    }
+    
   }
 }
 
@@ -16,6 +20,6 @@ int main() {
   convertLowerCase(arr);
    cout << "String after lower case: " << arr<<endl;
 
-
+  
   return 0;
 }
