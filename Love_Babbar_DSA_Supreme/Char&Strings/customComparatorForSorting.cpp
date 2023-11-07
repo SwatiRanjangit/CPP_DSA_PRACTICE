@@ -1,5 +1,5 @@
 /*
-INTIALLY when we use inbuilt SORT function then it works in ascending porder if we want to sort in order defined by me 
+INTIALLY when we use inbuilt SORT function then it works in ascending order if we want to sort in order defined by me 
 then i have me make a custome means own comparaot and pas into sort function.
 
 
