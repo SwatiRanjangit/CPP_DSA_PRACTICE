@@ -72,6 +72,15 @@ Node* reverse(Node* &head){
 }
 
 Node* AddTwoList(Node* &head1,Node* head2){
+
+  // if any has no values
+  if(head1 == NULL){
+    return head2;
+  }
+
+  if(head2 == NULL){
+    return head1;
+  }
    // reveser those two lists
    head1 = reverse(head1);
    head2=reverse(head2);
@@ -178,14 +187,6 @@ int main() {
   cout<<endl<<"after addition"<<endl;
   Node* ans = AddTwoList(head1,head2);
   print(ans);
-
-   
-   
-
- 
-   
-
-   
 
     return 0;
 }
