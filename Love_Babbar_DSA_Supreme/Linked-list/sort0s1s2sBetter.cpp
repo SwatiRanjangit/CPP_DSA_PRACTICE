@@ -56,6 +56,16 @@ void print(Node* &head){
 }
 
 Node* sortZeroOneTwos(Node* &head){
+
+  if(head == NULL){
+    cout<<endl<<"LL is empty"<<endl;
+    return NULL;
+  }
+
+  if(head->next == NULL){
+    cout<<endl<<"LL have only one element"<<endl;
+    return head;
+  }
   // create dummy Nodes
   Node* zeroHead = new Node(-1);
   Node* zeroTail = zeroHead;
@@ -151,16 +161,16 @@ Node* sortZeroOneTwos(Node* &head){
 int main() {
    Node* head = NULL;
    Node* tail = NULL;
-   insertHead(head,tail,0);
+   insertHead(head,tail,1);
+   insertTail(head,tail,2);
+   insertTail(head,tail,1);
    insertTail(head,tail,2);
    insertTail(head,tail,2);
-   insertTail(head,tail,0);
-   insertTail(head,tail,0);
-   insertTail(head,tail,0);
+   insertTail(head,tail,2);
    cout<<endl<<"before: "<<endl;
    print(head);
-
-   head = sortZeroOneTwos(head);
+   Node* temp = NULL;
+   head = sortZeroOneTwos(temp);
    cout<<endl<<"after: "<<endl;
 
    print(head);
