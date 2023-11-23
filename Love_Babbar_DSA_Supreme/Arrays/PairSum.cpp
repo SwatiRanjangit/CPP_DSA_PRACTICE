@@ -41,3 +41,35 @@ int main() {
 //    }
 //   }
 // }
+
+
+// best APPROACH
+
+// #include <iostream>
+// #include <unordered_map>
+// #include <vector>
+// using namespace std;
+
+void pairSum(vector<int> arr, int n, int target) {
+    unordered_map<int, int> mp;
+
+    for (int i = 0; i < n; i++) {
+        int complement = target - arr[i];
+
+        if (mp.find(complement) != mp.end()) {
+            cout << "Pair found: (" << complement << ", " << arr[i] << ")" << endl;
+        }
+
+        mp[arr[i]] = i; // Store the current element and its index in the map
+    }
+}
+
+int main() {
+    vector<int> v{1, 3, 5, 7, 9};
+    int n = v.size();
+    int sum = 8;
+
+    pairSum(v, n, sum);
+
+    return 0;
+}
