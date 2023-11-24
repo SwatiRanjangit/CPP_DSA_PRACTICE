@@ -31,3 +31,31 @@ int main() {
 
     return 0;
 }
+
+
+// USING MAP
+
+#include <iostream>
+#include<unordered_map>
+using namespace std;
+int print(int arr[],int n){
+    unordered_map<int,int>mp;
+ for(int i=0;i<n;i++){
+    mp[arr[i]]++;
+ }
+ 
+ for(auto it=mp.begin(); it != mp.end();it++){
+     if(it->second == 2){
+         cout<<it->first<<" "<<it->second<<endl;
+     }
+ }
+  
+   
+}
+
+int main() {
+   int arr[7]= {1, 2, 3, 6, 3, 6, 1};
+   print(arr,7);
+
+    return 0;
+}
