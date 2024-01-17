@@ -1,4 +1,3 @@
-// Online C++ compiler to run C++ program online
 //TC: O(mn)
 #include <iostream>
 using namespace std;

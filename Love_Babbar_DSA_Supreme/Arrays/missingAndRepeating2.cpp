@@ -4,7 +4,7 @@ using namespace std;
 int main() {
     int arr[6] = {1, 2, 3, 3, 4, 5};
 
-    for (int i = 0; i < 6; i++) {
+    for (int i = 0; i < 6; i++){
        int index = abs(arr[i])-1;
        if(arr[index]>0){
            arr[index]= - arr[index];

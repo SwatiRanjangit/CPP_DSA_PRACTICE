@@ -9,8 +9,6 @@ output is:
 using namespace std;
 int main() {
   int arr[5]={1,2,3,4,5};
-  
-  
   int size = 5;
   int start = 0;
   int end = size-1;
@@ -18,8 +16,7 @@ int main() {
   cout<<arr[start]<<" ";
   if(start != end)
     cout<<arr[end]<<" ";
-    
-  start++;
+    start++;
     end--;
   }
 }

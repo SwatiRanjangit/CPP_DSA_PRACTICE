@@ -2,6 +2,7 @@
 #include<vector>
 using namespace std;
 
+
  string longestCommonPrefix(vector<string>& strs) {
         int i=0;
         string ans;
@@ -9,7 +10,7 @@ using namespace std;
             // take 1st character and start comaparsion
             char curr_ch=0;
             for(auto str : strs){
-                // case when i for any of the string in the array become greater than it's size
+                // case when i for any of the string in the array become greater than it's size.
                  if(i >= str.size()){
                      curr_ch =0;
                      break;

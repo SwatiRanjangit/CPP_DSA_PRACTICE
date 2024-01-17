@@ -32,9 +32,8 @@ int main() {
   //loop for storing the elements in thier index suppose 1 to 1st index and 2 to 2nd index.
   while(i<size){
     int index = arr[i]-1;
-    
-   if(arr[i] != arr[index]){
-     swap(arr[i],arr[index]);
+       if(arr[i] != arr[index]){
+         swap(arr[i],arr[index]);
    }else{
      i++;
    }
